@@ -5,20 +5,21 @@
 
 ## What is this?
 
-A bash function that eases access to the summary statistics in the aimless.log file after processing with autoxds at SSRL.
+A bash function that eases access to the summary statistics in the aimless.log file after processing with `autoxds` on the Structural Molecular Biology (SMB) server at the Stanford Synchrotron Radiation LightSource (SSRL).
 
 The bash function takes the diffraction image file stem and the run number as command line arguments.
 The output files are assumed to be in a subfolder.
-The the function prints the summary table to the terminal and to a file for further processing.
+The function summary() prints the summary table to the terminal and a file for further formatting.
 
 ## Problem
 
-The summary table in the aimless.log file from the scaling and merging of X-ray diffraction images provides ab overview from which to decide whether to reprocess images with a different high-resolution limit.
+The summary table in the aimless.log file from the scaling and merging of X-ray diffraction images provides an overview from which to decide whether to reprocess the diffraction images with a different high-resolution limit.
 Accessing this summary table is simple using the search facility in Vim.
 It is more laborious to use other text editors.
 
 However, loading the file into Vim and entering the command takes time.
-I sought a faster approach when processing many datasets.
+I sought a faster approach using the command line when processing many datasets.
+
 
 ## Solution
 
@@ -28,11 +29,12 @@ A bash function that is sourced on log in to a bash shell and thus always ready.
 
 1. Copy the contents of summary.sh into a .bashFunctions file in your home directory.
 2. Source .bashFunctions from .bash_profile file.
-3. Invoke the bash shell by entering `bash`, if not already in bash. This function worksin zsh shell.
+3. Invoke the bash shell by entering `bash`, if not already in bash. This function works in zsh shell.
 
 ## Usage
+1. Navigate to the folder with the images and the autoxds output subfolders.
 1. Enter `summary <image filestem> <run number>`. The output files are assumed to be in a subfolder with the following syntax for the file name `<filestem>_<run-number>_xds`
-2. The extracted table is displayed in `more`.
+2. The extracted table is displayed in the terminal with the `more` file viewer. Enter `q` to escape this viewer. Enter the spacebar to advance. Enter `b` to go in reverse.
 
 ### Example of use
 
