@@ -11,7 +11,7 @@ The bash function takes the diffraction image file stem and the run number as co
 The output files are assumed to be in a subfolder.
 The function summary() prints the summary table to the terminal and a file for further formatting.
 
-## Problem
+## The problem
 
 The summary table in the aimless.log file from the scaling and merging of X-ray diffraction images provides an overview from which to decide whether to reprocess the diffraction images with a different high-resolution limit.
 Accessing this summary table is simple using the search facility in Vim.
@@ -21,7 +21,7 @@ However, loading the file into Vim and entering the command takes time.
 I sought a faster approach using the command line when processing many datasets.
 
 
-## Solution
+## The solution
 
 A bash function that is sourced on log in to a bash shell and thus always ready.
 
@@ -50,7 +50,7 @@ Easy-peasy!
 
 ## Example of extracted table
 
-Looks like I need to reprocess with a dmin of 1.333 Angstroms.
+
 
 ```bash
 <!--SUMMARY_BEGIN--> $TEXT:Result: $$ $$
@@ -106,6 +106,7 @@ Minimum and maximum SD correction factors: Fulls   0.27   2.82 Partials   0.00  
 $$ <!--SUMMARY_END-->
 ```
 
+Looks like I need to reprocess with a dmin of 1.333 Angstroms to get a  Mn(I/sd) ~  1.5.
 
 ## Update history
 
