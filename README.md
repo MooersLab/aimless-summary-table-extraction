@@ -6,6 +6,8 @@
 ## What is this?
 
 A bash function that eases access to the summary statistics in the aimless.log file after processing with `autoxds` on the Structural Molecular Biology (SMB) server at the Stanford Synchrotron Radiation LightSource (SSRL).
+The script `autoxds` by Dr. Ana Gonzalez is only available at SSRL.
+The script wraps around the programs `XDS`, `pointless`, `aimless`, and `ctruncate` to ease the processing of diffraction images.
 
 The bash function takes the diffraction image file stem and the run number as command line arguments.
 The output files are assumed to be in a subfolder.
@@ -19,7 +21,8 @@ It is more laborious to use other text editors.
 
 However, loading the file into Vim and entering the command takes time.
 I sought a faster approach using the command line when processing many datasets.
-
+For example, when testing different resolution limits, the up arrow key can rerun the bash function.
+The command line dominates this kind of iterative work.
 
 ## The solution
 
@@ -32,9 +35,9 @@ A bash function that is sourced on log in to a bash shell and thus always ready.
 3. Invoke the bash shell by entering `bash`, if not already in bash. This function works in zsh shell.
 
 ## Usage
-1. Navigate to the folder with the images and the autoxds output subfolders.
+1. Navigate to the folder with the images and the `autoxds` output subfolders.
 1. Enter `summary <image filestem> <run number>`. The output files are assumed to be in a subfolder with the following syntax for the file name `<filestem>_<run-number>_xds`
-2. The extracted table is displayed in the terminal with the `more` file viewer. Enter `q` to escape this viewer. Enter the spacebar to advance. Enter `b` to go in reverse.
+2. The `more` file viewer displays the extracted table in the terminal. Enter `q` to escape this viewer. Enter the spacebar to advance. Enter `b` to go in reverse.
 
 ### Example of use
 
