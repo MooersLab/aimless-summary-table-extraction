@@ -31,7 +31,7 @@ A bash function that is sourced on log in to a bash shell and thus always ready.
 3. Invoke the bash shell by entering `bash`, if not already in bash. This function worksin zsh shell.
 
 # Usage
-1. Enter `summary <image filestem> <run number>. The output files are assumed to be in a subfolder with the following syntax for the file name <filestem>_<run-number>_xds
+1. Enter `summary <image filestem> <run number>`. The output files are assumed to be in a subfolder with the following syntax for the file name `<filestem>_<run-number>_xds`
 2. The extracted table is displayed in `more`.
 
 
