@@ -34,9 +34,21 @@ A bash function that is sourced on log in to a bash shell and thus always ready.
 1. Enter `summary <image filestem> <run number>`. The output files are assumed to be in a subfolder with the following syntax for the file name `<filestem>_<run-number>_xds`
 2. The extracted table is displayed in `more`.
 
+### Example of use
+
+The image file stem is `3161`.
+The aimless log file resides in the subfolder `3161_1_xds`.
+The aimless log file name is `3161_1_aimless.log`.
+
+```bash
+summary 3161 1
+```
+
+Easy-peasy!
+
 ## Example of extracted table
 
-Looks like I need to reprocess with a dmin of 1.33.
+Looks like I need to reprocess with a dmin of 1.333 Angstroms.
 
 ```bash
 <!--SUMMARY_BEGIN--> $TEXT:Result: $$ $$
