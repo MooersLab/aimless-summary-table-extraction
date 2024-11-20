@@ -1,7 +1,7 @@
 ![Version](https://img.shields.io/static/v1?label=aimless-summary-table-extraction&message=0.0&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-# Bash function to extract Summary Table from aimless.log file
+# Extract summary table from aimless.log file
 
 ## What is this?
 
